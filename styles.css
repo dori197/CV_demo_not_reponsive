@@ -168,6 +168,8 @@ header{
     width: 100%;
     text-wrap: nowrap;
     overflow: hidden;
+    white-space: nowrap;
+    flex-wrap: nowrap;
     animation: anima-text-1 2s steps(40) infinite alternate-reverse;
 }
 @keyframes anima-text-1{
