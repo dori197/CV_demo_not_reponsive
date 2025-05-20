@@ -42,7 +42,7 @@ body *{
 }
 
 /* header */
-header{
+.header{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -142,6 +142,7 @@ header{
     display: flex;
     flex-direction: column;
     width: 95%;
+    gap: 40px;
     margin: 0 auto;
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
@@ -400,6 +401,8 @@ header{
 .bottom{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /* project */
@@ -411,7 +414,7 @@ header{
 .project .project-head{
     display: flex;
     justify-content: center;
-    width: 95%;
+    width: 100% ;
     margin-top: 40px;
     font-size: 30px;
     font-weight: 900;
@@ -532,6 +535,7 @@ header{
 .under{
     display: flex;
     justify-content: space-between;
+    align-items: center;    
     flex-wrap: wrap-reverse;
     width: 70%;
     margin: 30px auto;
@@ -632,6 +636,53 @@ header{
     justify-content: center;
 }
 
+/* under-mid */
+.under-mid{
+    display:grid;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: 900;
+    background-image: url(./spotify.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-clip: text;
+    color: transparent;
+}
+.under-mid-icon-1 i{
+    display:grid;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgb(254, 97, 191), rgb(252, 137, 66));
+    background-clip: text;
+    color: transparent;
+    animation: anima-icon-1 4s infinite linear;
+}
+.under-mid-icon-2 i{
+    display:grid;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgb(254, 97, 191), rgb(252, 137, 66));
+    background-clip: text;
+    color: transparent;
+    animation: anima-icon-2 4s infinite linear;
+}
+
+@keyframes  anima-icon-1{
+    0% { left: 0%; }  
+    25% { left: -20%; }  
+    50% { left: 0%; }  
+    75% { left: -20%; }  
+    100% { left: 0%; }  
+}
+@keyframes  anima-icon-2{
+    0% { right: 0%; }  
+    25% { right: -20%; }  
+    50% { right: 0%; }  
+    75% { right: -20%; }  
+    100% { right: 0%; }  
+}
 
 /* send-information */
 .send-information{
@@ -707,7 +758,15 @@ input::placeholder{
 }
 
 
-
+.menu-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;    
+}
+.bar{
+    display: none;
+}
 
 
 
@@ -717,9 +776,78 @@ input::placeholder{
     }
 }
 
-@media (max-width: 390px){
+@media (max-width: 768px){
+    .img{
+        margin-top: 15px;
+    }
+    .mid{
+        gap: 30px;
+    }
+    .infor{
+        margin: 0 auto;
+    }
+    .skill{
+        margin: 0 auto;
+    }
+    .project-list{
+        justify-content: space-around;
+        gap: 20px;
+    }
+    .under{
+        width: 95%;
+    }
+}
+
+@media (max-width: 630px){
+    
+    .bar {
+        display: block;
+        position: relative;
+        z-index: 100;
+     }
+    #mobileNav{
+        position:fixed;
+        right: -100%;
+        top: 0; 
+        width: 25%;    
+        height: 38vh;
+        padding: 20px;
+        border-radius: 5px;
+        background: rgba(38, 37, 37, 0.877);
+        transition: all 0.3s ease;
+        z-index: 99;
+    }
+    #mobileNav.active{
+        right: 0;
+    }
+
+    .head-list{
+        flex-direction: column; 
+        align-items: start;
+    }
+
+    .top{
+        justify-content: center;
+    }
+    .mid{
+        justify-content: center;
+    }
+    .under{
+        flex-direction: column-reverse;
+    }
+}
+@media (max-width: 430px){
     .infor{
         display: flex;
         flex-direction: column;
+    }
+    .skill{
+        width: 80%;
+    }
+}
+
+@media (max-width: 380px){
+    .project .project-head{
+        font-size: 25px;
     }
 }

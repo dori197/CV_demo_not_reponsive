@@ -12,17 +12,25 @@
 
 <body>
     <div id="first"></div>
-    <header>
+    <div class="header">
         <div class="logo">
             <a href="index.html">DORI</a>
         </div>
-        <div class="head-list">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="index.html">About</a></li>
-            <li><a href="index.html">Projects</a></li>
-            <li><a href="index.html">Blogs</a></li>
+        <nav>
+            <ul class="head-list" id="mobileNav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">About</a></li>
+                <li><a href="index.html">Projects</a></li>
+                <li><a href="index.html">Blogs</a></li>
+            </ul>
+        </nav>
+        <div class="menu-icon">
+            <div class="bar" id="menuToggle">
+                <i class="fa-solid fa-bars" id="barIcon"></i>
+                <i class="fa-solid fa-xmark" id="closeIcon"></i>
+            </div>
         </div>
-    </header>
+    </div>
     <main>
         <div class="on">
             <div class="top">
@@ -138,6 +146,11 @@
                     <a href="./index.html"><div class="app3"><i class="fa-brands fa-instagram"></i></div></a>
                     <a href="./index.html"><div class="app4"><i class="fa-brands fa-telegram"></i></div></a>
                 </div>
+            </div>
+            <div class="under-mid">
+                <div class="under-mid-icon-1"><i class="fa-solid fa-caret-up"></i></div>
+                Contact Me
+                <div class="under-mid-icon-2"><i class="fa-solid fa-caret-up"></i></div>
             </div>
             <form class="send-information">
                 <p>Leave Your Infomation</p>
